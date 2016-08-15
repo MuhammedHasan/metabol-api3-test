@@ -1,14 +1,14 @@
 describe("Metabolite", function() {
 
-    var urlMetabolite = "http://metabolitics.biodb.sehir.edu.tr/api3/metabolite/CE6234_n";
+    var urlMetabolite = "http://metabolitics.biodb.sehir.edu.tr/api3/metabolite/atp_c";
     it("should be response metabolite detail (" + urlMetabolite + ")", function(done) {
         $.get(urlMetabolite, function(data) {
-            expect(data.id).toEqual("CE6234[n]");
+            expect(data.id).toEqual("atp_c");
             done();
         });
     });
 
-    var urlRelatedReactions = "http://metabolitics.biodb.sehir.edu.tr/api3/relatedreactions/CE6234_n";
+    var urlRelatedReactions = "http://metabolitics.biodb.sehir.edu.tr/api3/relatedreactions/atp_c";
     it("should be response metabolite's related reactions (" + urlRelatedReactions + ")", function(done) {
         $.get(urlRelatedReactions, function(data) {
             expect(data.reactions.length > 0).toBeTruthy();
@@ -18,7 +18,7 @@ describe("Metabolite", function() {
 
     it("should be response metabolite at same time", function(done) {
         $.get(urlMetabolite, function(data) {
-            expect(data.id).toEqual("CE6234[n]");
+            expect(data.id).toEqual("atp_c");
             done();
         });
 
