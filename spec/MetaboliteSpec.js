@@ -1,6 +1,6 @@
 describe("Metabolite", function() {
 
-    var urlMetabolite = "http://biodb.sehir.edu.tr/api3/metabolite/CE6234[n]";
+    var urlMetabolite = "http://metabolitics.biodb.sehir.edu.tr/api3/metabolite/CE6234[n]";
     it("should be response metabolite detail (" + urlMetabolite + ")", function(done) {
         $.get(urlMetabolite, function(data) {
             expect(data.id).toEqual("CE6234[n]");
@@ -8,7 +8,7 @@ describe("Metabolite", function() {
         });
     });
 
-    var urlRelatedReactions = "http://biodb.sehir.edu.tr/api3/relatedreactions/CE6234[n]";
+    var urlRelatedReactions = "http://metabolitics.biodb.sehir.edu.tr/api3/relatedreactions/CE6234[n]";
     it("should be response metabolite's related reactions (" + urlRelatedReactions + ")", function(done) {
         $.get(urlRelatedReactions, function(data) {
             expect(data.reactions.length > 0).toBeTruthy();

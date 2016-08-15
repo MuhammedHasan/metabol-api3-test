@@ -1,6 +1,6 @@
 describe("Search", function() {
 
-    var urlSearchPrefix = "http://biodb.sehir.edu.tr/api3/searchprefix/p";
+    var urlSearchPrefix = "http://metabolitics.biodb.sehir.edu.tr/api3/searchprefix/p";
     it("should be response search prefix (" + urlSearchPrefix + ")", function(done) {
         $.get(urlSearchPrefix, function(data) {
             expect(data.reactions.length > 0).toBeTruthy();
@@ -9,7 +9,7 @@ describe("Search", function() {
         });
     });
 
-    var urlSearch = "http://biodb.sehir.edu.tr/api3/search/pro";
+    var urlSearch = "http://metabolitics.biodb.sehir.edu.tr/api3/search/pro";
     it("should be response urlSearch (" + urlSearch + ")", function(done) {
         $.get(urlSearch, function(data) {
             expect(data.reactions.length > 0).toBeTruthy();

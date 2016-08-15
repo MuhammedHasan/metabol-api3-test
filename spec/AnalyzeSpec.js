@@ -1,6 +1,6 @@
 describe("Analyze", function() {
 
-    var urlFbaStart = "http://biodb.sehir.edu.tr/api3/fba/start";
+    var urlFbaStart = "http://metabolitics.biodb.sehir.edu.tr/api3/fba/start";
 
     function startFbaAndTest(callback) {
         $.get(urlFbaStart, function(data) {
@@ -15,7 +15,7 @@ describe("Analyze", function() {
         });
     });
 
-    var urlAnalyze = "http://biodb.sehir.edu.tr/api3/fba/";
+    var urlAnalyze = "http://metabolitics.biodb.sehir.edu.tr/api3/fba/";
 
     function getIterationAndTest(key, iterationId, callback) {
         $.get(urlAnalyze + key + '/' + iterationId, function(data) {
